@@ -37,7 +37,8 @@
     </div>
 
     <div>
-        <iframe src="http://140.119.65.76:8899/j36426052/web_packet_prediction/reports/iframe-test--VmlldzoxOQ" style="border:none;height:1024px;width:100%"></iframe>
+        <iframe src="http://140.119.65.76:8899/j36426052/web_packet_prediction/reports/iframe-test--VmlldzoxOQ" style="border:none;height:1024px;width:100%">
+        </iframe>
         <!-- <iframe src="http://140.119.65.76:8899/j36426052/web_packet_prediction/reports/iframe-test--VmlldzoxOQ" 
             style="border:none;"
             width="600" 
@@ -45,7 +46,7 @@
             frameborder="0"
             allowfullscreen >
         </iframe> -->
-        <p>meow</p>
+        
     </div>
 </template>
 
