@@ -3,51 +3,52 @@
   import HomePage from './components/HomePage.vue'
   import { ref } from 'vue'
 
-  
-  const collapsed = ref(false)
-  const miniMenu = ref(false)
+const collapsed = ref(false)
+const miniMenu = ref(false)
+ 
 
-  const testMenu = [
-    {
-      name: 'Getting Started',
-      icon: { text: 'home' , class: 'material-icons-outlined' },
-      children: [
-        {
-          name: 'level 1.1',
-          href: '/a',
-          icon: { text: 'home' , class: 'material-icons-outlined'},
-          children: [
-            {
-              href: '/b',
-              name: 'level 1.1.1',
-            },
-          ]
-        },
-        {
-          name: 'level 1.2'
-        }
-      ],
+const testMenu = [
+  {
+    name: 'Getting Started',
+    icon: { 
+      text:"Home",
+      class: 'material-icons-outlined' 
     },
-    {
-      header: 'Settings'
-    },
-    {
-      name: 'Dashboard',
-      icon: { class: 'material-icons-outlined', text: 'dashboard' },
-      children: [
-        {
-          href: '/c',
-          name: 'level 2.1',
-        },
-      ]
-    },
-    {
-      name: 'close menu',
-      icon: { text: 'settings', class: 'material-icons-outlined' },
-    },
-  ]
-
-  
+    children: [
+      {
+        name: 'level 1.1',
+        href: '/a',
+        icon: { text: 'home' , class: 'material-icons-outlined'},
+        children: [
+          {
+            href: '/b',
+            name: 'level 1.1.1',
+          },
+        ]
+      },
+      {
+        name: 'level 1.2'
+      }
+    ],
+  },
+  {
+    header: 'Settings'
+  },
+  {
+    name: 'Dashboard',
+    icon: { class: 'material-icons-outlined', text: 'dashboard' },
+    children: [
+      {
+        href: '/c',
+        name: 'level 2.1',
+      },
+    ]
+  },
+  {
+    name: 'close menu',
+    icon: { text: 'settings', class: 'material-icons-outlined' },
+  },
+]
 
 
 
@@ -142,8 +143,8 @@
 
 
 <template>
-
-   <VueAwesomeSideBar
+  
+    <VueAwesomeSideBar
       v-model:miniMenu="miniMenu"
       v-model:collapsed="collapsed"
       :menu="testMenu"
@@ -159,15 +160,12 @@
             
             <HomePage msg="Malicious Packages Classifier" />
             <nav>
-             
                   <RouterLink @click="scrollToAbout" to="/about">About Malicious Packages</RouterLink>
                   <RouterLink @click="scrollToMembers" to="/members">Team members</RouterLink>
                   <RouterLink @click="scrollToUpload" to="/upload">Analyze Files</RouterLink>
                   <RouterLink @click="scrollToToday" to="/today">Today's Tasks</RouterLink>
                   <RouterLink @click="scrollToDeep" to="/deep">Deep Analysis</RouterLink>
                   <RouterLink @click="scrollToTrack" to="/track">Training Track</RouterLink>
-
-               
             </nav>
             
           </div>
@@ -298,6 +296,8 @@ nav a:first-of-type {
 .back-to-top:hover {
   background-color: #0056b3;
 }
+
+
 
 
 

@@ -11,12 +11,13 @@ import { BiBagFill, FaClock } from 'oh-vue-icons/icons';
 
 import './assets/main.css';
 
+// side bar 
 import vueAwesomeSidebar from 'vue-awesome-sidebar'
 import 'vue-awesome-sidebar/dist/vue-awesome-sidebar.css'
+//import './style.scss'
 
 
 addIcons(BiBagFill, FaClock);
-  
 
 
 const app = createApp(App);
