@@ -108,15 +108,17 @@
           <img alt="Vue logo" class="logo" src="@/assets/spyware.png" width="250" height="200" />
           <div class="wrapper">
             
-            <HomePage msg="Malicious Packages Classifier" />
+            <HomePage msg="捍衛讚識—封包俠" />
 
             <nav>
                   <RouterLink @click="scrollToAbout" to="/about">About Malicious Packages</RouterLink>
                   <RouterLink @click="scrollToMembers" to="/members">Team members</RouterLink>
+                  <!--
                   <RouterLink @click="scrollToUpload" to="/upload">Analyze Files</RouterLink>
                   <RouterLink @click="scrollToToday" to="/today">Today's Tasks</RouterLink>
                   <RouterLink @click="scrollToDeep" to="/deep">Deep Analysis</RouterLink>
                   <RouterLink @click="scrollToTrack" to="/track">Training Track</RouterLink>
+                  -->
             </nav>
             
           </div>
@@ -251,46 +253,3 @@ nav a:first-of-type {
 
 </style>
 
-<style lang="scss">
-    :root {
-      --primary: #4ade80;
-      --primary-alt: #22c55e;
-      --grey: #64748b;
-      --dark: #1e293b;
-      --dark-alt: #334155;
-      --light: #f1f5f9;
-      --sidebar-width: 300px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Fira sans', sans-serif;
-    }
-
-    body {
-      background: var(--light);
-    }
-
-    button {
-      cursor: pointer;
-      appearance: none;
-      border: none;
-      outline: none;
-      background: none;
-    }
-
-    .app {
-      display: flex;
-
-      main {
-        flex: 1 1 0;
-        padding: 2rem;
-
-        @media (max-width: 1024px) {
-          padding-left: 6rem;
-        }
-      }
-    }
-</style>
