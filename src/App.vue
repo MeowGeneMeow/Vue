@@ -154,57 +154,57 @@
 
 
 
-.center-container {
-  display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
-  min-height: 100vh; /* 最小高度為視窗高度 */
-  margin: 0px; /* 去除外邊距 */
-  padding: 0px; /* 去除内邊距 */
-  flex-direction: column; /* 設置為縱向排列 */
-  max-width: 100%; /* 設置最大寬度為100% */
-}
+  .center-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    
+    min-height: 100vh; /* 最小高度為視窗高度 */
+    margin: 0px; /* 去除外邊距 */
+    padding: 0px; /* 去除内邊距 */
+    flex-direction: column; /* 設置為縱向排列 */
+    max-width: 100%; /* 設置最大寬度為100% */
+  }
 
 
-.upload-area input[type="file"] {
-  margin-right: 1rem;
-}
+  .upload-area input[type="file"] {
+    margin-right: 1rem;
+  }
 
 
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
+  header {
+    line-height: 1.5;
+    max-height: 100vh;
+  }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+  .logo {
+    display: block;
+    margin: 0 auto 2rem;
+  }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+  nav {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 2rem;
+  }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
+  nav a.router-link-exact-active {
+    color: var(--color-text);
+  }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
+  nav a.router-link-exact-active:hover {
+    background-color: transparent;
+  }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
+  nav a {
+    display: inline-block;
+    padding: 0 1rem;
+    border-left: 1px solid var(--color-border);
+  }
 
-nav a:first-of-type {
-  border: 0;
-}
+  nav a:first-of-type {
+    border: 0;
+  }
 
   @media (min-width: 768px) {
   header {
@@ -213,25 +213,53 @@ nav a:first-of-type {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+    .logo {
+      margin: 0 2rem 0 0;
+    }
 
-  header .wrapper {
+    header .wrapper {
+      display: flex;
+      place-items: flex-start;
+      flex-wrap: wrap;
+      white-space: nowrap;
+    }
+
+    nav {
+      text-align: left;
+      margin-left: -1rem;
+      font-size: 1rem;
+
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+  header {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-    white-space: nowrap;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
+    .logo {
+      margin: 0 2rem 0 0;
+    }
 
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+    header .wrapper {
+      display: flex;
+      place-items: flex-start;
+      flex-wrap: wrap;
+      white-space: nowrap;
+    }
+
+    nav {
+      text-align: left;
+      margin-left: -1rem;
+      font-size: 1rem;
+
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
 }
 
 .back-to-top {
