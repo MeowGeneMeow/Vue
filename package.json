@@ -8,12 +8,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chart.js": "^4.4.0",
     "helmet": "^7.0.0",
     "oh-vue-icons": "^1.0.0-rc3",
     "vue": "^3.3.4",
     "vue-awesome-sidebar": "^1.2.3",
+    "vue-chartjs": "^5.2.0",
+    "vue-count-to": "^1.0.13",
     "vue-router": "^4.2.4",
-    "vue-sidebar-menu-akahon": "^1.0.2"
+    "vue-sidebar-menu-akahon": "^1.0.2",
+    "vue3-count-to": "^1.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",

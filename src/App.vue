@@ -3,9 +3,14 @@
   import { RouterLink, RouterView } from 'vue-router'
   import HomePage from './components/HomePage.vue'
   import Sidebar from './components/Sidebar.vue'
-
+  import BarChart1 from './components/BarChart1.vue'
+  import BarChart2 from './components/BarChart2.vue'
+  import Num from './components/numByte.vue'
+  import Num1 from './components/numByte1.vue'
   import { ref } from 'vue'
-
+  
+  
+  
 
   // 網頁的滑輪
   const handleMousewheel = (event) => {
@@ -93,18 +98,33 @@
 };
 
 
-</script>
 
+
+</script>
 
 
 <template>
   
   <Sidebar/>
-
+  <div class="column">
+    <div class="model-info">
+        <p>多樣模型資訊</p>
+    </div>
+    <div class="bar-chart">
+      <BarChart1 />
+      <BarChart2 />
+    </div>
+    <div class="autocounter">
+      <Num/>
+      <div class="space"></div>
+      <Num1/>
+    </div>
+    
+  
+  
   <div @mousewheel="handleMousewheel">
-      <div class="center-container">
-        <header >
-          <!--<img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />-->
+        <!--<header >
+          <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
           <img alt="Vue logo" class="logo" src="@/assets/spyware.png" width="250" height="200" />
           <div class="wrapper">
             
@@ -113,19 +133,18 @@
             <nav>
                   <RouterLink @click="scrollToAbout" to="/about">About Malicious Packages</RouterLink>
                   <RouterLink @click="scrollToMembers" to="/members">Team members</RouterLink>
-                  <!--
+                  
                   <RouterLink @click="scrollToUpload" to="/upload">Analyze Files</RouterLink>
                   <RouterLink @click="scrollToToday" to="/today">Today's Tasks</RouterLink>
                   <RouterLink @click="scrollToDeep" to="/deep">Deep Analysis</RouterLink>
                   <RouterLink @click="scrollToTrack" to="/track">Training Track</RouterLink>
-                  -->
+                  
             </nav>
             
           </div>
-        </header>
-      </div> <!-- 置中 -->
-      <div id="members">
-        <div id="upload">
+        </header>-->
+      
+      
           <div id="about">
             <div id="today">
               <div id="deep">
@@ -135,37 +154,52 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
+  
   </div>
   
+
   
   <div class="back-to-top" @click="scrollToTop">
     Back to Top
   </div>
 
-  
+</div> 
 
 </template>
 
 
 <style scoped>
 
+.column {
+  flex-direction: column; /* 設置為縱向排列 */
+  margin-top: 80px; /* 調整上邊距的值以增加空間 */
+}
 
+.model-info {
+  background-color: rgb(52, 47, 47); /* 背景顏色 */
+  padding: 10px; /* 內邊距 */
+  border: 1px solid #ccc; /* 邊框 */
+  text-align: center; /* 文字置中 */
+}
 
+.autocounter{
+  margin-top: 80px; /* 調整上邊距的值以增加空間 */
+  display: flex; 
+  margin-left: 10px;
+  justify-content: center;
+}
 
-  .center-container {
-    display: flex;
-    justify-content: center; /* 水平居中 */
-    
-    min-height: 100vh; /* 最小高度為視窗高度 */
-    margin: 0px; /* 去除外邊距 */
-    padding: 0px; /* 去除内邊距 */
-    flex-direction: column; /* 設置為縱向排列 */
-    max-width: 100%; /* 設置最大寬度為100% */
-  }
+.space {
+  width: 100px; 
+}
 
-
+.bar-chart{
+  display: flex; 
+  margin-top: 80px; /* 調整上邊距的值以增加空間 */
+  height: 250px;
+  width: 250px;
+}
+  
   .upload-area input[type="file"] {
     margin-right: 1rem;
   }

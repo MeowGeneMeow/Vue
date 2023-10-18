@@ -68,6 +68,7 @@ const scrollToAbout = () => {
 </script>
 
 <style lang="scss" scoped>
+
 aside {
 
   position: fixed; /* 使側邊欄固定在視窗中 */
@@ -102,11 +103,13 @@ aside {
 		}
 	}
 
+	
+
 	.menu-toggle-wrap {
 		display: flex;
 		justify-content: flex-end;
 		margin-bottom: 1rem;
-    margin-left: 0.5rem;
+    	margin-left: 0.5rem;
 
 		position: relative;
 		top: 0;
@@ -150,7 +153,8 @@ aside {
 
 	.menu {
 		margin: 0 -1rem;
-
+		margin-right: 0; // 初始化
+  		transition: margin-right 0.2s ease-in-out;
 		.button {
 			display: flex;
 			align-items: center;
@@ -166,7 +170,7 @@ aside {
 				transition: 0.2s ease-in-out;
 			}
 			.text {
-        margin-left: 20px;
+        		margin-left: 20px;
 				color: var(--light);
 				transition: 0.2s ease-in-out;
 			}
@@ -202,6 +206,7 @@ aside {
 
 	&.is-expanded {
 		width: var(--sidebar-width);
+
 
 		.menu-toggle-wrap {
 			top: -3rem;

@@ -57,8 +57,8 @@ import TamperIcon from './icons/IconTamper.vue'
       <template #heading>數據篡改</template>
       惡意封包可以被用來進行數據篡改，改變傳輸數據的內容。這可能會導致信息不一致，損壞或錯誤的數據被傳遞，影響數據的完整性和可靠性。
     </PackageItem>
+    </div>
   </div>
-</div>
 </template>
 
 <style scoped>
