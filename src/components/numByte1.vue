@@ -17,7 +17,7 @@
       return {
         counting: true,
         currentCount: 0,
-        targetCount: 100, // 指定的目标数字
+        targetCount: 42, // 指定的目标数字
       };
     },
     methods: {

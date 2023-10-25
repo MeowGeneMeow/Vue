@@ -69,11 +69,14 @@ const scrollToAbout = () => {
 
 <style lang="scss" scoped>
 
+
+
 aside {
 
-  position: fixed; /* 使側邊欄固定在視窗中 */
-  left: 0; /* 將側邊欄置於最左邊 */
-  top: 0; /* 側邊欄頂部對齊視窗頂部 */
+	position: fixed; /* 使側邊欄固定在視窗中 */
+	left: 0; /* 將側邊欄置於最左邊 */
+	top: 0; /* 側邊欄頂部對齊視窗頂部 */
+	z-index: 999; /* 設定一個較高的 z-index 值 */
 
 	display: flex;
 	flex-direction: column;

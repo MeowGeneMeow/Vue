@@ -17,7 +17,7 @@
       return {
         counting: true,
         currentCount: 0,
-        targetCount: 100, // 指定的目标数字
+        targetCount: 15428, // 指定的目标数字
       };
     },
     methods: {
@@ -28,9 +28,9 @@
       count() {
         if (this.currentCount < this.targetCount) {
           setTimeout(() => {
-            this.currentCount++;
+            this.currentCount = this.currentCount+5;
             this.count();
-          }, 0.1); // 1秒钟自动加一
+          }, 0.001); // 1秒钟自动加一
         } else {
           
           this.currentCount = this.targetCount;

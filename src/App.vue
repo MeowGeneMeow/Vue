@@ -2,14 +2,71 @@
 
   import { RouterLink, RouterView } from 'vue-router'
   import HomePage from './components/HomePage.vue'
-  import Sidebar from './components/Sidebar.vue'
-  import BarChart1 from './components/BarChart1.vue'
-  import BarChart2 from './components/BarChart2.vue'
+  import Sidebar from './components/Sidebar.vue'  
+  import Pie from './components/PieChart.vue'
   import Num from './components/numByte.vue'
   import Num1 from './components/numByte1.vue'
   import { ref } from 'vue'
+  import LineChart from './components/LineChart.vue'
+  import LineChart1 from './components/LineChart1.vue'
   
-  
+
+   // 使用JavaScript定期更新CPU使用率
+   function updateCPU1Usage() {
+        // 在這裡獲取最新的CPU使用率數據，可以使用Ajax請求從伺服器獲取數據
+        // 這裡示範使用隨機生成一個虛構的CPU使用率
+        var randomCPUUsage = Math.floor(Math.random() * 101);
+
+        // 更新HTML元素中的數據
+        document.getElementById("cpu1-usage").textContent = randomCPUUsage + "%";
+    }
+    setInterval(updateCPU1Usage, 2500);
+   
+   function updateCPU2Usage() {
+       
+        var randomCPUUsage = Math.floor(Math.random() * 101);
+
+       
+        document.getElementById("cpu2-usage").textContent = randomCPUUsage + "%";
+    }
+    setInterval(updateCPU2Usage, 2500);
+
+
+    function updateRAM1Usage() {
+       
+      var randomRAMUsage = Math.floor(Math.random() * 21) + 50;
+
+      document.getElementById("ram1-usage").textContent = randomRAMUsage + "%";
+    }
+
+    setInterval(updateRAM1Usage, 2500);
+
+    function updateRAM2Usage() {
+       
+       var randomRAMUsage = Math.floor(Math.random() * 21) + 50;
+ 
+       document.getElementById("ram2-usage").textContent = randomRAMUsage + "%";
+     }
+ 
+     setInterval(updateRAM2Usage, 2500);
+
+     function updateINT1Usage() {
+       
+        var randomINTUsage = (Math.random() * (120 - 0.1) + 0.1).toFixed(1);
+ 
+        document.getElementById("internet1-usage").textContent = randomINTUsage + "MB";
+     }
+ 
+     setInterval(updateINT1Usage, 2500);
+ 
+     function updateINT2Usage() {
+       
+      var randomINTUsage = (Math.random() * (120 - 0.1) + 0.1).toFixed(1);
+ 
+       document.getElementById("internet2-usage").textContent = randomINTUsage + "MB";
+     }
+ 
+     setInterval(updateINT2Usage, 2500);
   
 
   // 網頁的滑輪
@@ -108,20 +165,35 @@
   <Sidebar/>
   <div class="column">
     <div class="model-info">
-        <p>多樣模型資訊</p>
+        <p>Tracker 1</p>
+        <p>CPU使用率： <span id="cpu1-usage">Loading...</span></p>
+        <p>RAM使用率： <span id="ram1-usage">Loading...</span></p>
+        <p>網路流量： <span id="internet1-usage">Loading...</span></p>
     </div>
-    <div class="bar-chart">
-      <BarChart1 />
-      <BarChart2 />
+    <div class="model-info">
+        <p>Tracker 2</p>
+        <p>CPU使用率： <span id="cpu2-usage">Loading...</span></p>
+        <p>RAM使用率： <span id="ram2-usage">Loading...</span></p>
+        <p>網路流量： <span id="internet2-usage">Loading...</span></p>
+    </div>
+    <div class="line-chart">
+      <LineChart />
+      <LineChart1 />
     </div>
     <div class="autocounter">
       <Num/>
       <div class="space"></div>
       <Num1/>
     </div>
+    <div class="pie-chart">
+      <p>惡意封包的種類</p>
+      <Pie/>
+    </div>
     
   
   
+
+
   <div @mousewheel="handleMousewheel">
         <!--<header >
           <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
@@ -177,13 +249,14 @@
 
 .model-info {
   background-color: rgb(52, 47, 47); /* 背景顏色 */
-  padding: 10px; /* 內邊距 */
+  padding: 15px; /* 內邊距 */
   border: 1px solid #ccc; /* 邊框 */
-  text-align: center; /* 文字置中 */
+  text-align: left; /* 文字置中 */
+  font-size: larger;
 }
 
 .autocounter{
-  margin-top: 80px; /* 調整上邊距的值以增加空間 */
+  margin-top: 60px; /* 調整上邊距的值以增加空間 */
   display: flex; 
   margin-left: 10px;
   justify-content: center;
@@ -193,11 +266,20 @@
   width: 100px; 
 }
 
-.bar-chart{
+.line-chart{
   display: flex; 
   margin-top: 80px; /* 調整上邊距的值以增加空間 */
+  margin-left: 10px; /* 調整上邊距的值以增加空間 */
   height: 250px;
-  width: 250px;
+  width: 500px;
+}
+
+.pie-chart{
+  margin-top: 80px; /* 調整上邊距的值以增加空間 */
+  font-size: 40px;
+  width: 800px;
+  height: 500px;
+  justify-content: center;
 }
   
   .upload-area input[type="file"] {
