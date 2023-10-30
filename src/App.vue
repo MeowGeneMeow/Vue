@@ -86,11 +86,11 @@
   }
   
   // 按按鈕以後到某個地方
-  const scrollToMembers = () => {
-  const members = document.getElementById('members')
-  if (members) {
+  const scrollToView = () => {
+  const views = document.getElementById('views')
+  if (views) {
     window.scrollTo({
-      top: members.offsetTop - (window.innerHeight - members.clientHeight) / 2,
+      top: views.offsetTop - (window.innerHeight - views.clientHeight) / 2,
       behavior: 'smooth'
       })
     }
@@ -161,9 +161,13 @@
 
 
 <template>
-  
+
   <Sidebar/>
   <div class="column">
+    <div class="title">
+      <p> Trackers </p>
+    </div>
+    
     <div class="model-info">
         <p>Tracker 1</p>
         <p>CPU使用率： <span id="cpu1-usage">Loading...</span></p>
@@ -176,15 +180,27 @@
         <p>RAM使用率： <span id="ram2-usage">Loading...</span></p>
         <p>網路流量： <span id="internet2-usage">Loading...</span></p>
     </div>
+
+    <div class="title">
+        <p> Model's Information </p>
+    </div>
     <div class="line-chart">
       <LineChart />
       <LineChart1 />
     </div>
+
+    <div class="title">
+        <p> Packets </p>
+      </div>
     <div class="autocounter">
       <Num/>
       <div class="space"></div>
       <Num1/>
     </div>
+
+    <div class="title">
+        <p> Types of Attack </p>
+      </div>
     <div class="pie-chart">
       <p>惡意封包的種類</p>
       <Pie/>
@@ -216,9 +232,8 @@
           </div>
         </header>-->
       
-      
           <div id="about">
-            <div id="today">
+            <div id="views">
               <div id="deep">
                 <div id="track">
                   <RouterView/>
@@ -245,6 +260,20 @@
 .column {
   flex-direction: column; /* 設置為縱向排列 */
   margin-top: 80px; /* 調整上邊距的值以增加空間 */
+  
+}
+
+.title{
+  text-align: center;  /* 文本居中对齐 */
+  background-color: gray; /* 背景颜色 */
+  color: #fff; /* 文本颜色 */
+  padding: 20px; /* 内边距 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文本阴影 */
+  font-size: 30px; /* 字体大小 */
+  font-family: 'Arial', sans-serif; /* 字体样式 */
+  letter-spacing: 2px; /* 字母间距 */
+  border-radius: 10px; /* 边框圆角 */
+  margin-top: 60px;
 }
 
 .model-info {
@@ -253,6 +282,7 @@
   border: 1px solid #ccc; /* 邊框 */
   text-align: left; /* 文字置中 */
   font-size: larger;
+  justify-content: center;
 }
 
 .autocounter{
@@ -277,8 +307,8 @@
 .pie-chart{
   margin-top: 80px; /* 調整上邊距的值以增加空間 */
   font-size: 40px;
-  width: 800px;
-  height: 500px;
+  width: 1000px;
+  height: 400px;
   justify-content: center;
 }
   

@@ -14,7 +14,7 @@
 		<div class="menu">
 			<RouterLink @click="scrollToAbout" to="/about" class="button">
 				<img src="../assets/monitor.png" width="40" height="40">
-				<span class="text">Overview</span>
+				<span class="text">Packets</span>
 			</RouterLink>
 			<RouterLink @click="scrollToAbout" to="/about" class="button">
 				<img src="../assets/analysis.png" width="40" height="40">
