@@ -14,9 +14,9 @@
 		<div class="menu">
 			<RouterLink @click="scrollToAbout" to="/about" class="button">
 				<img src="../assets/monitor.png" width="40" height="40">
-				<span class="text">Packets</span>
+				<span class="text">Attacks</span>
 			</RouterLink>
-			<RouterLink @click="scrollToAbout" to="/about" class="button">
+			<RouterLink @click="scrollToDeep" to="/deep" class="button">
 				<img src="../assets/analysis.png" width="40" height="40">
 				<span class="text">Deep Analysis</span>
 			</RouterLink>
@@ -61,6 +61,16 @@ const scrollToAbout = () => {
   if (about) {
     window.scrollTo({
       top: about.offsetTop - (window.innerHeight - about.clientHeight) / 2,
+      behavior: 'smooth'
+      })
+    }
+  }
+
+  const scrollToDeep = () => {
+  const deep = document.getElementById('deep')
+  if (deep) {
+    window.scrollTo({
+      top: deep.offsetTop - (window.innerHeight - deep.clientHeight) / 2,
       behavior: 'smooth'
       })
     }

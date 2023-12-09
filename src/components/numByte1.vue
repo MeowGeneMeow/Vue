@@ -30,7 +30,7 @@
           setTimeout(() => {
             this.currentCount++;
             this.count();
-          }, 0.1); // 1秒钟自动加一
+          }, 100); // 1秒钟自动加一
         } else {
           this.currentCount = this.targetCount;
         }

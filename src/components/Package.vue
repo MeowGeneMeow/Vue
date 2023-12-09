@@ -10,7 +10,7 @@ import TamperIcon from './icons/IconTamper.vue'
 <template>
   <div class="center-container">
     <div class="about-content">
-    <h1 class="topic">惡意封包可能造成的五大威脅</h1>
+    <h1 class="topic">網路惡意攻擊可能造成的五大威脅</h1>
     <br>
     <PackageItem>
       <template #icon>
@@ -18,7 +18,7 @@ import TamperIcon from './icons/IconTamper.vue'
       </template>
       <template #heading>拒絕服務攻擊（DDoS）</template>
 
-      Vue’s
+      
       <!--<a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>-->
       惡意封包可以用於發起分佈式拒絕服務攻擊，其中大量的惡意封包被發送到目標服務器，導致服務器不堪重負而無法提供正常服務。這可能導致服務中斷、可用性下降，甚至造成業務損失。
     </PackageItem>

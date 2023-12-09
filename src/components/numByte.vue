@@ -17,7 +17,7 @@
       return {
         counting: true,
         currentCount: 0,
-        targetCount: 15428, // 指定的目标数字
+        targetCount: 5024, // 指定的目标数字
       };
     },
     methods: {

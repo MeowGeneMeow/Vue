@@ -1,7 +1,6 @@
 <script setup>
 
   import { RouterLink, RouterView } from 'vue-router'
-  import HomePage from './components/HomePage.vue'
   import Sidebar from './components/Sidebar.vue'  
   import Pie from './components/PieChart.vue'
   import Num from './components/numByte.vue'
@@ -185,8 +184,9 @@
         <p> Model's Information </p>
     </div>
     <div class="line-chart">
-      <LineChart />
-      <LineChart1 />
+        <LineChart />
+        <div class="space"></div>
+        <LineChart1 />
     </div>
 
     <div class="title">
@@ -202,7 +202,6 @@
         <p> Types of Attack </p>
       </div>
     <div class="pie-chart">
-      <p>惡意封包的種類</p>
       <Pie/>
     </div>
     
@@ -260,6 +259,7 @@
 .column {
   flex-direction: column; /* 設置為縱向排列 */
   margin-top: 80px; /* 調整上邊距的值以增加空間 */
+  justify-content: center;
   
 }
 
@@ -299,17 +299,21 @@
 .line-chart{
   display: flex; 
   margin-top: 80px; /* 調整上邊距的值以增加空間 */
-  margin-left: 10px; /* 調整上邊距的值以增加空間 */
+  margin-left: 80px;
   height: 250px;
-  width: 500px;
+  width: 500px; 
 }
 
+
+
 .pie-chart{
+  display: flex;
+  justify-content: center;
   margin-top: 80px; /* 調整上邊距的值以增加空間 */
-  font-size: 40px;
+  margin-left: 60px;
   width: 1000px;
   height: 400px;
-  justify-content: center;
+  
 }
   
   .upload-area input[type="file"] {
