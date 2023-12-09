@@ -161,11 +161,34 @@
 
 <template>
 
+
+
   <Sidebar/>
+
+  
+
   <div class="column">
+
+    <div style="display: flex; text-align: center;">
+      <div>
+        <a href="http://140.119.65.82:8080" target="_blank">
+          <img src="./airflow.jpg" alt="wanDB" style="max-width: 400px; height: 400px;">
+        </a>
+        <p style="font-weight: bold; font-size: 18px; margin-top: 10px;">Airflow</p>
+      </div>
+      <div>
+        <a href="https://wandb.ai/jester36883688/web_packet_prediction?workspace=user-jester36883688" target="_blank">
+          <img src="./wanDB.png" alt="wanDB" style="max-width: 1000px; height: 400px;">
+        </a>
+        <p style="font-weight: bold; font-size: 18px; margin-top: 10px;">WanDB</p>
+      </div>
+    </div>
+
+
     <div class="title">
       <p> Trackers </p>
     </div>
+
     
     <div class="model-info">
         <p>Tracker 1</p>
